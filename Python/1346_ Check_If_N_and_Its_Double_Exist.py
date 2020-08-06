@@ -4,13 +4,12 @@ class Solution(object):
         :type arr: List[int]
         :rtype: bool
         """
-        double = False
         arr2 = []
         for idx,num in enumerate(arr):
             arr2[:] = arr[:]
             arr2.pop(idx)
             if (num*2 in arr2):
-                double = True
-                return double
+                return True
+                break
             
-        return double
+        return False
