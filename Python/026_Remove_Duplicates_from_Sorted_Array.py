@@ -4,6 +4,5 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        for i in range(len(nums), 0, -1):
-            if nums[i] == nums[i-1]:
-                del nums[i]
+        nums[:] = sorted(set(nums)) 
+        return len(nums)
